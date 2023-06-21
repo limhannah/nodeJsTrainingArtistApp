@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Artists</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Birth Year</th>
+                <th>Country</th>
+                <th>Preferred Medium</th>
+                <th>Update</th>
+                <th>Delete</th>
+                <!-- <th>Artwork Title</th>
+                <th>Artwork Year</th>
+                <th>Artwork Medium</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            
+            <% for(let artist of artists) { %>
+                <tr>
+                    <td><%= artist.name %></td>
+                    <td><%= artist.birth_year %></td>
+                    <td><%= artist.country %></td>
+                    <td><%= artist.preferred_medium %></td>
+                    <td><a href="/artists/<%= artist.id %>/update">Update</a></td>
+                    <td><a href="/artists/<%= artist.id %>/delete">Delete</a></td>
+                    <!-- <td><%= artist.title %></td>
+                    <td><%= artist.year_created %></td>
+                    <td><%= artist.medium %></td> -->
+                </tr>
+            <% } %>
+            
+        </tbody>
+    </table>
+</body>
+</html>
